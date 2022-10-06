@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;500;700&display=swap');
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   font-size: 62.5%;
+   font-family: inherit;
+}
+body {
+   font-family: 'Barlow Condensed',sans-serif;
+   font-size: 2rem;
+   
+}
+
+a {
+   text-decoration: none;
+}
+p {
+
+   font-family: 'Barlow Condensed',sans-serif;
+}
+
+:root {
+   --violet-light: rgb(217, 203, 222);
+   font-family: 'Barlow Condensed',sans-serif;
+}
+
+/*############################
+        Typography
+#############################*/
+.heading-secondary {
+   font-size: 2.8rem;
+   color: var(--violet-light);
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   font-weight: 500;
+   margin-bottom: 3rem;
+}
+.heading-primary {
+   font-size: 12rem;
+   display: block;
+   color: #fff;
+   font-family: 'Times New Roman', Times, serif;
+   font-weight: 300;
+}
+/*############################
+        Animation
+#############################*/
+
+@keyframes zoom-in-and-out {
+   0% {
+      transform: scale(1);
+   }
+    50% {
+      transform: scale(1.1);
+   }
+   100% {
+      transform: scale(1);
+   }
+}
+
+
+
+/*############################
+        Layout
+#############################*/
+.container  {
+   margin: 0 auto;
+   padding-top: 20rem;
+   max-width: 100rem;
+   color: #fff;
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   font-family: 'Barlow Condensed';
+   gap: 4rem;
+   align-items: center;
+}
+
+
+/*############################
+        Header
+#############################*/
+.header-box {
+   display:flex;
+   justify-content: space-between;
+   gap: 1rem;
+   height: auto;
+   width: 100%;
+   position: absolute;
+   left: 50%;
+   top: 5vh;
+   transform: translateX(-50%);
+   z-index: 10;
+}
+
+.header {
+   display: flex;
+   align-items: center;
+   gap:5rem;
+   background-color: rgba(255, 255, 255, 0.1);
+   backdrop-filter: blur(1rem);
+   padding: 0 4rem;
+   margin-left: -6rem;
+   font-size: 2.4rem;
+   height: 9rem;
+
+}
+
+.logo-box {
+   display: flex;
+   align-items: center;
+   gap: 2rem;
+   margin-left: 4rem;
+}
+.dash{
+   height: 1px;
+   background-color: #fff;
+   width: 40vw;
+   opacity: 0.5;
+   z-index: 10;
+}
+
+.nav__link {
+   color:#fff;
+   display:inline-block;
+   height: 9rem;
+   padding-top: 2.5rem;
+   border-bottom: 4px solid  rgba(255, 255, 255, 0);
+}
+.nav__link:hover {
+   border-bottom: 4px solid  rgba(255, 255, 255, 0.3);
+}
+.nav__link--active {
+   border-bottom: 4px solid  rgba(255, 255, 255, 0.8) !important;
+}
+
+
+/*############################
+        Home
+#############################*/
+.container-box {
+   position: relative;
+}
+.btn--big {
+   position: absolute;
+   top:50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+   border: none;
+   background-color: #fff;
+   color: #000;
+   height: 28rem;
+   width: 28rem;
+   font-family: 'TimesNewRoman';
+   font-size: 3.2rem;
+   border-radius: 50%;
+   text-transform: uppercase;
+   letter-spacing: 2px;
+   transition: 0.3s;
+   cursor: pointer;
+}
+.btn--big:hover {
+   box-shadow: 0 0 0 6rem rgba(255, 255, 255, 0.15);
+}
+
+
+
+/*############################
+        Destinaiton
+#############################*/
+.destination__image {
+   animation: zoom-in-and-out 3s infinite ease-in-out;
+}
+.image-box {
+   display: flex;
+flex-direction: column;
+gap: 5rem;
+align-items: center;
+}
+.nav {
+   display: flex;
+   justify-content: space-around;
+}
+.btn {
+    border: none;
+    background-color: transparent;
+    color: var(--violet-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    font-family: inherit;
+    border-bottom: 4px solid  rgba(255, 255, 255, 0);
+    height: 5rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+   border-bottom: 4px solid  rgba(255, 255, 255, 0.3);
+}
+.btn--active {
+   color: #fff;
+   border-bottom: 4px solid  rgba(255, 255, 255, 0.8) !important;
+}
+
+.description {
+   display: flex;
+   flex-direction: column;
+   gap: 3rem;
+}
+
+.data-box {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+}
+.data-title {
+   color: var(--violet-light);
+   font-size: 1.4rem;
+   text-transform: uppercase;
+
+}
+
+/*############################
+        Crew
+#############################*/
+.crew__description {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+}
+.crew__detail {
+   display: flex;
+   flex-direction: column;
+   gap: 4rem;
+}
+
+.crew__title {
+   font-size: 2.8rem;
+   color: rgba(255, 255, 255, 0.5);
+}
+.crew__name {
+   font-size: 3.6rem;
+   color: #fff;
+}
+.crew__selector {
+   display: flex;
+   gap: 2rem;
+}
+.radio-btn {
+   height: 2rem;
+   width: 2rem;
+   border-radius: 50%;
+   background-color: rgba(255,255,255,0.5);
+   cursor: pointer;
+}
+.radio-btn--active {
+   background-color:#fff!important ;
+}
+
+
+/*############################
+        Technology
+#############################*/
+.technology-box {
+   display: grid;
+   grid-template-columns: 1fr 5fr;
+   gap: 3rem;
+}
+.number-box{
+   display: flex;
+   flex-direction: column;
+   gap: 5rem;
+   justify-content: center;
+}
+.number{
+   border: none;
+   height: 4rem;
+   width: 4rem;
+   border-radius: 50%;
+   font-size: 2.8rem;
+   font-family: 'Times New Roman', Times, serif;
+   border: 1px solid #fff;
+   background-color: #000;
+   color: #fff;
+   cursor: pointer;
+}
+.number-selected {
+   color: #000;
+   background-color: #fff;
+}
+.text-box {
+   display: flex;
+   flex-direction: column;
+   gap: 3rem;
+}
+
+.technology-title {
+   font-size: 6rem;
+   font-family: 'Times New Roman', Times, serif;
+}
